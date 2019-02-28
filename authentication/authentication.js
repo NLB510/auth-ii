@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs')
 
 
 module.exports = {
-  authenticate,
+  restricted,
   generateToken,
   hashUser
 };
@@ -20,7 +20,7 @@ function hashUser(user) {
 
 }
 
-function authenticate(req, res, next) {
+function restricted(req, res, next) {
   const token = req.headers.authorization;
 
   if (token) {

@@ -14,7 +14,7 @@ router.post("/", (req, res) => {
 
   const user = req.body;
 
-  console.log(user.password);
+  
 
   if (!username || !password || !department) {
     return res.status(400).json({
